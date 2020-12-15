@@ -27,5 +27,8 @@
 		"gulp-sass": "^4.1.0",
 		"gulp-stylus": "^2.7.0",
 		"gulp-uglify": "^3.0.2"
+	},
+	"dependencies": {
+		"gsap": "^3.5.1"
 	}
 }

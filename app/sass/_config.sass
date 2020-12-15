@@ -1,21 +1,21 @@
 // USER VARIABLES SECTION
 
 $accent: orange // Accent Color
-$fontsize: 16px // Body Font Size
-$textcolor: #333 // Text Color
+$fontsize: 24px // Body Font Size
+$textcolor: #000 // Text Color
 $lineheight: 1.65 // Document Line Height
-$userfont: Roboto, sans-serif // User Font Family
+$userfont: SourceCode, sans-serif // User Font Family
 $systemfont: -apple-system, BlinkMacSystemFont, Arial, sans-serif // System Font Family
 
 // Bootstrap compatible gutter variable => $gutter
-$grid-gutter-width: 30px
+$grid-gutter-width: 20px
 $gutter: $grid-gutter-width
 
 // IMPORT SECTION
 
 @import 'node_modules/bootstrap/scss/bootstrap-reboot.scss' // Bootstrap Reboot collection
 @import 'node_modules/bootstrap/scss/mixins/_breakpoints.scss' // Bootstrap Breakpoints mixin
-// @import 'node_modules/bootstrap/scss/bootstrap-grid.scss' // Optional Bootstrap Grid
+@import 'node_modules/bootstrap/scss/bootstrap-grid.scss' // Optional Bootstrap Grid
 // @import 'node_modules/bootstrap/scss/utilities/_sizing.scss' // Optional Bootstrap Utilites
 
 // FONTS LOAD SECTION
@@ -28,10 +28,10 @@ $gutter: $grid-gutter-width
 		src: local($fname), url($furl) format('woff2')
 		// font-display: swap // Uncomment to initially display system fonts
 
-@include font('Roboto', normal, 400, '../fonts/roboto-regular-webfont.woff2')
-@include font('Roboto', italic, 400, '../fonts/roboto-italic-webfont.woff2')
-@include font('Roboto', normal, 700, '../fonts/roboto-bold-webfont.woff2')
-@include font('Roboto', italic, 700, '../fonts/roboto-bolditalic-webfont.woff2')
+@include font('SourceCode', normal, 400, '../fonts/source-code-pro-v13-latin_cyrillic-regular.woff2')
+@include font('SourceCode', normal, 600, '../fonts/source-code-pro-v13-latin_cyrillic-600.woff2')
+@include font('SourceCode', normal, 700, '../fonts/source-code-pro-v13-latin_cyrillic-700.woff2')
+@include font('SourceCode', normal, 900, '../fonts/source-code-pro-v13-latin_cyrillic-900.woff2')
 
 // GENERAL DOCUMENT STYLES
 
@@ -41,6 +41,15 @@ $gutter: $grid-gutter-width
 ::selection
 	background-color: $accent
 	color: #fff
+strong
+	font-weight: 600
+
+a
+	color: #000
+	transition: .2s all
+	text-decoration: underline
+	&:hover
+		color: $accent
 
 input, textarea
 	outline: none
